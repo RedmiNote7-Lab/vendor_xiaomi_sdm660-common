@@ -113,9 +113,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "dpmserviceapp",
+	name: "qcrilmsgtunnel",
 	owner: "xiaomi",
-	apk: "proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
+	apk: "proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -125,9 +125,9 @@ android_app_import {
 }
 
 android_app_import {
-	name: "qcrilmsgtunnel",
+	name: "dpmserviceapp",
 	owner: "xiaomi",
-	apk: "proprietary/system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk",
+	apk: "proprietary/system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk",
 	certificate: "platform",
 	dex_preopt: {
 		enabled: false,
@@ -149,9 +149,22 @@ android_app_import {
 }
 
 dex_import {
+	name: "tcmclient",
+	owner: "xiaomi",
+	jars: ["proprietary/system/framework/tcmclient.jar"],
+}
+
+dex_import {
 	name: "QtiTelephonyServicelibrary",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/QtiTelephonyServicelibrary.jar"],
+	system_ext_specific: true,
+}
+
+dex_import {
+	name: "qcrilhook",
+	owner: "xiaomi",
+	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
 	system_ext_specific: true,
 }
 
@@ -166,13 +179,6 @@ dex_import {
 	name: "dpmapi",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "qcrilhook",
-	owner: "xiaomi",
-	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
 	system_ext_specific: true,
 }
 
